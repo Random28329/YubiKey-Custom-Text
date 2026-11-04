@@ -15,6 +15,15 @@ Store small pieces of text on a FIDO2 security key (e.g. YubiKey) using passkeys
 
 Each entry is bound to its URL name, so other websites can't access it.
 
+## Reading your data
+
+| | Normal mode | largeBlob mode |
+|---|---|---|
+| Yubico Authenticator app (e.g. Windows, Android) | URL name + username visible (after PIN) | URL name + username visible, **largeBlob text not visible** |
+| This page | Key (user ID) via *Read back Key* | largeBlob text via *Read largeBlob* |
+
+Either mode uses **1 passkey slot** per entry (25 slots on older YubiKeys, 100 on firmware 5.7+).
+
 ## Limits per field
 
 | Field | Max | Allowed |
@@ -45,9 +54,8 @@ Each entry is bound to its URL name, so other websites can't access it.
 
 - `start.bat`: local server + launcher
 - `yubikey-text-store.html`: the page
-
-- <img width="825" height="1359" alt="3" src="https://github.com/user-attachments/assets/bb61381e-4c46-49d5-a09d-cadb56d7030d" />
-<img width="1092" height="1088" alt="2" src="https://github.com/user-attachments/assets/d4be40f8-e770-4b49-8927-300c1c8ce2d1" />
-<img width="1072" height="299" alt="1" src="https://github.com/user-attachments/assets/4a04b21e-0ad7-498a-b514-3efd566fd1b7" />
-<img width="279" height="365" alt="4" src="https://github.com/user-attachments/assets/4d633a0c-808e-49f9-a2fe-3adaa3b1758c" />
-
+- 
+<img width="1072" height="299" alt="1" src="https://github.com/user-attachments/assets/64effc0b-c83d-4a43-aa00-5599ef7578c4" />
+<img width="1092" height="1088" alt="2" src="https://github.com/user-attachments/assets/f8d6e60c-83b7-44f6-a5a3-277a8dd94bfb" />
+<img width="825" height="1359" alt="3" src="https://github.com/user-attachments/assets/6e2b2d8b-e2ba-41bc-84fa-3185120b5f7c" />
+<img width="279" height="365" alt="4" src="https://github.com/user-attachments/assets/414ec31e-600e-48bb-a2ce-5e31a37dbccd" />
