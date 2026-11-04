@@ -40,6 +40,10 @@ Either mode uses **1 passkey slot** per entry (25 slots on older YubiKeys, 100 o
 - largeBlob in characters: about 4,000–5,000 for random text (passwords, keys) and about 8,000–12,000 for normal writing, because it gets compressed. The page shows the estimated size.
 - The key may shorten very long URL names, and may not display the display name.
 
+**About the 4,096-byte largeBlob size:** Yubico's docs state 4,096 bytes on firmware 5.7.0+ and 1,024 bytes on 5.5.x/5.6.x ([source](https://docs.yubico.com/hardware/yubikey/yk-tech-manual/yk5-firmware-5.7.html)). That statement is for the YubiKey 5 Series. Yubico lists blob storage as supported on the Security Key Series with 5.7, but doesn't state its size, so the same 4,096 bytes is assumed. To check your key:
+- **Exact:** a direct-to-key tool (e.g. libfido2's `fido2-token`, run as admin on Windows) shows the key's `maxSerializedLargeBlobArray`.
+- **Practical:** save bigger and bigger text on the page. If saves fail at around 1,000 bytes on the counter, your key has 1,024. If they work up to around 4,000, it has 4,096.
+
 ## Requirements
 
 - Windows 10/11, Chrome, Edge or Firefox
@@ -58,7 +62,7 @@ Either mode uses **1 passkey slot** per entry (25 slots on older YubiKeys, 100 o
 
 ## Disclaimer
 
-Use at your own risk. This is an unofficial tool, not affiliated with Yubico. Using a security key for storage isn't an officially supported feature.
+Use at your own risk. This is an unofficial tool, not affiliated with Yubico. Using a security key for storage isn't an officially supported feature. Don't rely on it as the only copy of anything important.
 
 ## Files
 
