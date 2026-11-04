@@ -7,6 +7,8 @@ Store small pieces of text on a FIDO2 security key (e.g. YubiKey) using passkeys
 - **Normal mode:** creates a passkey whose username, display name and user ID hold your own text (up to 64 bytes each). The username is visible in Yubico Authenticator.
 - **largeBlob mode:** also stores up to about 4 KB of encrypted text in the key's largeBlob storage (CTAP 2.1, YubiKey firmware 5.7+). You can read, edit and clear it later.
 
+> **Either method takes 1 passkey slot on your key per entry.**
+
 ## How it works
 
 1. `start.bat` asks for a URL name (or generates a random one) and runs a tiny local web server with built-in PowerShell, listening only on 127.0.0.1.
@@ -49,6 +51,14 @@ Either mode uses **1 passkey slot** per entry (25 slots on older YubiKeys, 100 o
 - The same URL name + the same Key (user ID) replaces the existing passkey. The page warns you first.
 - Clear a passkey's largeBlob before deleting the passkey, or its data stays stuck on the key.
 - Anyone with your key **and** your PIN can read the stored text. Keep another backup of anything important.
+
+## Tested on
+
+- YubiKey Security Key C NFC only, on Windows 11 with Firefox. 
+
+## Disclaimer
+
+Use at your own risk. This is an unofficial tool, not affiliated with Yubico. Using a security key for storage isn't an officially supported feature.
 
 ## Files
 
