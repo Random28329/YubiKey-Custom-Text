@@ -45,3 +45,9 @@ Each entry is bound to its URL name, so other websites can't access it.
 
 - `start.bat`: local server + launcher
 - `yubikey-text-store.html`: the page
+
+- <img width="825" height="1359" alt="3" src="https://github.com/user-attachments/assets/bb61381e-4c46-49d5-a09d-cadb56d7030d" />
+<img width="1092" height="1088" alt="2" src="https://github.com/user-attachments/assets/d4be40f8-e770-4b49-8927-300c1c8ce2d1" />
+<img width="1072" height="299" alt="1" src="https://github.com/user-attachments/assets/4a04b21e-0ad7-498a-b514-3efd566fd1b7" />
+<img width="279" height="365" alt="4" src="https://github.com/user-attachments/assets/4d633a0c-808e-49f9-a2fe-3adaa3b1758c" />
+
